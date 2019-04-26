@@ -121,8 +121,8 @@ php artisan vendor:publish --provider="Kubill\Comments\ServiceProvider" --tag=vi
 In the view where you want to display comments, place this code and modify it:
 
 ```
-@comments(['model' => $book])
-@endcomments
+@component('vendor.comments.components.comments',['model'=>$article])
+@endcomponent
 ```
 
 In the example above we are setting the `commentable_type` to the class of the book. We are also passing the `commentable_id` the `id` of the book so that we know to which book the comments relate to. Behind the scenes, the package detects the currently logged in user if any.
