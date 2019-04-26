@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-body">
         <form method="POST" action="{{ url('comments') }}">
-            @csrf
+            {{ csrf_field() }}
             <input type="hidden" name="commentable_type" value="\{{ get_class($model) }}" />
             <input type="hidden" name="commentable_id" value="{{ $model->id }}" />
             <div class="form-group">

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravelista\Comments;
+namespace Kubill\Comments;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Illuminate\Support\Facades\Blade;
@@ -24,14 +24,14 @@ class ServiceProvider extends LaravelServiceProvider
             __DIR__ . '/../resources/views' => resource_path('views/vendor/comments'),
         ], 'views');
 
-        Blade::component('comments::components.comments', 'comments');
+        //Blade::component('comments::components.comments', 'comments');
 
         // Define permission defined in config
         $permissions = config('comments.permissions', [
-            'create-comment' => 'Laravelista\Comments\CommentPolicy@create',
-            'delete-comment' => 'Laravelista\Comments\CommentPolicy@delete',
-            'edit-comment' => 'Laravelista\Comments\CommentPolicy@update',
-            'reply-to-comment' => 'Laravelista\Comments\CommentPolicy@reply',
+            'create-comment' => 'Kubill\Comments\CommentPolicy@create',
+            'delete-comment' => 'Kubill\Comments\CommentPolicy@delete',
+            'edit-comment' => 'Kubill\Comments\CommentPolicy@update',
+            'reply-to-comment' => 'Kubill\Comments\CommentPolicy@reply',
         ]);
         foreach($permissions as $permission => $policy) {
             Gate::define($permission, $policy);

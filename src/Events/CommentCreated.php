@@ -1,9 +1,9 @@
 <?php
 
-namespace Laravelista\Comments\Events;
+namespace Kubill\Comments\Events;
 
 use Illuminate\Queue\SerializesModels;
-use Laravelista\Comments\Comment;
+use Kubill\Comments\Comment;
 
 class CommentCreated
 {

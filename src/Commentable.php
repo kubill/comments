@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravelista\Comments;
+namespace Kubill\Comments;
 
 /**
  * Add this trait to any model that you want to be able to

@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravelista\Comments;
+namespace Kubill\Comments;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;

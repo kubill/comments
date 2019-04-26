@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravelista\Comments;
+namespace Kubill\Comments;
 
 /**
  * Add this trait to your User model so

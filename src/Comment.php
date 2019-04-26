@@ -1,11 +1,11 @@
 <?php
 
-namespace Laravelista\Comments;
+namespace Kubill\Comments;
 
 use Illuminate\Database\Eloquent\Model;
-use Laravelista\Comments\Events\CommentCreated;
-use Laravelista\Comments\Events\CommentUpdated;
-use Laravelista\Comments\Events\CommentDeleted;
+use Kubill\Comments\Events\CommentCreated;
+use Kubill\Comments\Events\CommentUpdated;
+use Kubill\Comments\Events\CommentDeleted;
 
 class Comment extends Model
 {

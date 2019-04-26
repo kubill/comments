@@ -1,8 +1,8 @@
 <?php
 
-namespace Laravelista\Comments;
+namespace Kubill\Comments;
 
-use Laravelista\Comments\Comment;
+use Kubill\Comments\Comment;
 
 class CommentPolicy
 {

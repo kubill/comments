@@ -52,14 +52,14 @@ I plan to expand this chapter with more tutorials and articles. If you write som
 
 **Articles:**
 
-- [Laravelista: Comments preview (Outdated)](https://laravelista.com/posts/comments-preview)
+- [Kubill: Comments preview (Outdated)](https://Kubill.com/posts/comments-preview)
 
 ## Installation
 
 From the command line:
 
 ```bash
-composer require laravelista/comments
+composer require kubill/comments
 ```
 
 ### Run migrations
@@ -75,7 +75,7 @@ php artisan migrate
 Add the `Commenter` trait to your User model so that you can retrieve the comments for a user:
 
 ```php
-use Laravelista\Comments\Commenter;
+use Kubill\Comments\Commenter;
 
 class User extends Authenticatable
 {
@@ -88,7 +88,7 @@ class User extends Authenticatable
 Add the `Commentable` trait to the model for which you want to enable comments for:
 
 ```php
-use Laravelista\Comments\Commentable;
+use Kubill\Comments\Commentable;
 
 class Product extends Model
 {
@@ -105,7 +105,7 @@ In the `config` file you can specify:
 Publish the config file (optional):
 
 ```bash
-php artisan vendor:publish --provider="Laravelista\Comments\ServiceProvider" --tag=config
+php artisan vendor:publish --provider="Kubill\Comments\ServiceProvider" --tag=config
 ```
 
 ### Publish views (customization)
@@ -113,7 +113,7 @@ php artisan vendor:publish --provider="Laravelista\Comments\ServiceProvider" --t
 The default UI is made for Bootstrap 4, but you can change it however you want.
 
 ```bash
-php artisan vendor:publish --provider="Laravelista\Comments\ServiceProvider" --tag=views
+php artisan vendor:publish --provider="Kubill\Comments\ServiceProvider" --tag=views
 ```
 
 ## Usage
@@ -133,6 +133,6 @@ If you open the page containing the view where you have placed the above code, y
 
 This package fires events to let you know when things happen.
 
-- `Laravelista\Comments\Events\CommentCreated`
-- `Laravelista\Comments\Events\CommentUpdated`
-- `Laravelista\Comments\Events\CommentDeleted`
+- `Kubill\Comments\Events\CommentCreated`
+- `Kubill\Comments\Events\CommentUpdated`
+- `Kubill\Comments\Events\CommentDeleted`

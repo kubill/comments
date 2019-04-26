@@ -20,8 +20,8 @@
             @can('delete-comment', $comment)
                 <a href="{{ url('comments/' . $comment->id) }}" onclick="event.preventDefault();document.getElementById('comment-delete-form-{{ $comment->id }}').submit();" class="btn btn-sm btn-link text-danger text-uppercase">Delete</a>
                 <form id="comment-delete-form-{{ $comment->id }}" action="{{ url('comments/' . $comment->id) }}" method="POST" style="display: none;">
-                    @method('DELETE')
-                    @csrf
+                    {{ method_field('DELETE') }}
+                    {{ csrf_field() }}
                 </form>
             @endcan
         </p>
@@ -31,8 +31,8 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <form method="POST" action="{{ url('comments/' . $comment->id) }}">
-                            @method('PUT')
-                            @csrf
+                            {{ method_field('PUT') }}
+                            {{ csrf_field() }}
                             <div class="modal-header">
                                 <h5 class="modal-title">Edit Comment</h5>
                                 <button type="button" class="close" data-dismiss="modal">
@@ -61,7 +61,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <form method="POST" action="{{ url('comments/' . $comment->id) }}">
-                            @csrf
+                            {{ csrf_field() }}
                             <div class="modal-header">
                                 <h5 class="modal-title">Reply to Comment</h5>
                                 <button type="button" class="close" data-dismiss="modal">
